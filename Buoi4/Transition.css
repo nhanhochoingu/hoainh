@@ -1,0 +1,134 @@
+.text {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:aliceblue;
+    font-size: 20px;
+    background-color: #484b54;
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 50px;
+    position:relative;
+    top: 200px;
+}
+
+.image-lily {
+    position:absolute;
+    left: -40px;
+    width: 400px;
+    height:400px;
+    filter:brightness(85%);
+    transition: left 0.4s, filter 0.5s;
+    z-index: 1;
+    
+}
+
+.container:hover .image-lily {
+    left: 0px;
+    filter:brightness(100%);    
+}
+.container {
+    width: 350px;
+    height: 300px;  
+    transition: width 0.3s;
+    transition-timing-function: ease;
+    position: relative;
+    overflow: hidden;
+}
+.content {
+    position:absolute;  
+    left: 20px;
+    top: 200px;
+    transition: top 0.3s;
+    transition-timing-function: ease;
+    z-index: 3;
+}
+
+.container:hover .content {
+    top: 170px;
+}
+.content-none {
+    font-size:10px;
+    position: absolute;
+    top: 35px;
+    display:inline-block;
+    opacity: 0;
+    transition: top 0.3s;
+    transition-property: opacity;
+    transition-duration: 0.3s ;
+    transition-timing-function: ease;   
+    white-space: nowrap ;
+}
+
+.container:hover .content-none {
+    top: 35px;
+    opacity: 1;
+}
+
+.marley{
+    display:flex;
+    flex-direction: row;
+}
+.image-marley {
+    position:relative;
+    width: 350px;
+    height: 300px;
+    filter:brightness(70%) ;
+   
+}
+
+
+.image-marley img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+}
+
+.content-marley{
+    transform: translate(150px, -280px);
+    max-width: 300px;
+    transition: transform 0.3s; 
+}
+
+.image-marley:hover .content-marley{
+    transform: translate(150px, -300px);
+}
+
+.content-marley-none{
+    
+    position:absolute;
+    font-size: 10px;
+    top: 230px;
+    right:100px;
+    overflow: hidden;
+    opacity: 0;
+    transition: top 0.3s;
+    transition-property: opacity, transform;
+    transition-duration: 0.3s ;
+    transition-timing-function: ease; 
+    transform: translate(-50px,-10px);
+    text-align: right;
+}
+
+.image-marley:hover .content-marley-none {
+    transform: translate(-50px ,-50px);
+    opacity: 1;
+}
+
+.marley hr {
+    border: none; 
+    height: 3px; 
+    width: 80%;
+    background-color:aliceblue;
+    transform: translate(-125px, 40px);
+    opacity:0;
+    transition: top 0.3s;
+    transition-property: opacity, transform;
+    transition-duration: 0.3s ;
+    transition-timing-function: ease; 
+}
+
+.image-marley:hover hr {
+    transform: translate(-125px, -10px);
+    opacity:1;
+    width: 80%;
+}
